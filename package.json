@@ -2,9 +2,10 @@
   "name": "indent-travel",
   "displayName": "Indent Travel",
   "description": "Move cursor and select contents between lines with the same indents.",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "publisher": "pipme",
   "author": "pipme",
+  "icon": "icon.png",
   "galleryBanner": {
     "color": "#1e415e",
     "theme": "dark"
