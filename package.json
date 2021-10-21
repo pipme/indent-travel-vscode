@@ -1,0 +1,94 @@
+{
+  "name": "indent-travel",
+  "displayName": "Indent Travel",
+  "description": "Move cursor and select contents between lines with the same indents.",
+  "version": "0.0.2",
+  "publisher": "pipme",
+  "author": "pipme",
+  "galleryBanner": {
+    "color": "#1e415e",
+    "theme": "dark"
+  },
+  "engines": {
+    "vscode": "^1.10.0"
+  },
+  "license": "MIT",
+  "categories": [
+    "Other"
+  ],
+  "keywords": [
+    "indent",
+    "navigation",
+    "block",
+    "travel"
+  ],
+  "activationEvents": [
+    "onCommand:block-travel.jumpUp",
+    "onCommand:block-travel.jumpDown",
+    "onCommand:block-travel.selectUp",
+    "onCommand:block-travel.selectDown"
+  ],
+  "main": "src/extension",
+  "contributes": {
+    "commands": [
+      {
+        "command": "block-travel.jumpUp",
+        "title": "Block (same indents) travel up"
+      },
+      {
+        "command": "block-travel.jumpDown",
+        "title": "Block (same indents) travel down"
+      },
+      {
+        "command": "block-travel.selectUp",
+        "title": "Block (same indents) select up"
+      },
+      {
+        "command": "block-travel.selectDown",
+        "title": "Block (same indents) select down"
+      }
+    ],
+    "keybindings": [
+      {
+        "command": "block-travel.jumpUp",
+        "key": "ctrl+[",
+        "when": "editorTextFocus"
+      },
+      {
+        "command": "block-travel.jumpDown",
+        "key": "ctrl+]",
+        "when": "editorTextFocus"
+      },
+      {
+        "command": "block-travel.selectUp",
+        "key": "ctrl+shift+[",
+        "when": "editorTextFocus"
+      },
+      {
+        "command": "block-travel.selectDown",
+        "key": "ctrl+shift+]",
+        "when": "editorTextFocus"
+      }
+    ]
+  },
+  "scripts": {
+    "postinstall": "node ./node_modules/vscode/bin/install",
+    "test": "node ./node_modules/vscode/bin/test"
+  },
+  "devDependencies": {
+    "typescript": "^2.0.3",
+    "vscode": "^1.0.0",
+    "mocha": "^2.3.3",
+    "eslint": "^3.6.0",
+    "@types/node": "^6.0.40",
+    "@types/mocha": "^2.2.32"
+  },
+  "bugs": {
+    "url": "https://github.com/pipme/indent-travel-vscode/issues"
+  },
+  "homepage": "https://marketplace.visualstudio.com/items?itemName=pipme.indent-travel",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/pipme/indent-travel-vscode"
+  }
+}
